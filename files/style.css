@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/*:root variable*/
+:root {
+  /* Premium Dark Theme */
+  --background: hsl(222, 47%, 6%);
+  --foreground: hsl(45, 30%, 96%);
+  --card: hsl(222, 47%, 9%);
+  --card-foreground: hsl(45, 30%, 96%);
+  --primary: hsl(43, 74%, 49%);
+  --primary-foreground: hsl(222, 47%, 6%);
+  --secondary: hsl(222, 30%, 15%);
+  --secondary-foreground: hsl(45, 30%, 96%);
+  --muted: hsl(222, 30%, 12%);
+  --muted-foreground: hsl(220, 15%, 55%);
+  --border: hsl(222, 30%, 18%);
+  --gold: hsl(43, 74%, 49%);
+  --gold-light: hsl(43, 74%, 65%);
+  --gold-dark: hsl(43, 74%, 35%);
+  --navy-dark: hsl(222, 47%, 6%);
+  --navy: hsl(222, 47%, 11%);
+  --navy-light: hsl(222, 30%, 18%);
+  --gradient-gold: linear-gradient(
+    135deg,
+    hsl(43, 74%, 49%),
+    hsl(35, 85%, 55%)
+  );
+  --shadow-gold: 0 4px 30px -5px hsla(43, 74%, 49%, 0.25);
+  --shadow-card: 0 10px 40px -10px hsla(222, 47%, 3%, 0.5);
+  --font-heading: "Space Grotesk";
+  --font-body: "Inter", sans-serif;
+  --radius: 0.75rem;
+
+  /* font-size */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-grident {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 1rem 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .nav-logo {
+  font-size: var(--fs-2xl);
+  font-weight: bold;
+  color: var(--foreground);
+}
+
+.nav-logo span {
+  color: var(--gold);
+}
+
+.nav-link a {
+  margin-left: 2rem;
+  font-size: var(--fs-md);
+  color: var(--muted-foreground);
+  transition: color 0.3s ease;
+  position: relative;
+}
+.nav-link a:hover,
+.nav-link a.active {
+  color: var(--gold);
+}
+
+::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--gold);
+  transition: all 0.5s linear;
+  border-radius: 4px;
+}
+
+.nav-link a:hover::after {
+  width: 100%;
+}
+
+/*mobile menu*/
+.menu-bar {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-bar span {
+  height: 3px;
+  width: 25px;
+  background: var(--foreground);
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+.nav-link-mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.5s;
+}
+/*mobile menu end*/
+
+/* hero-section start */
+
+.hero-section {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      hsla(43, 74%, 49%, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      hsla(43, 74%, 49%, 0.05) 0%,
+      transparent 50%
+    );
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-orb-1 {
+  width: 400px;
+  height: 400px;
+  background: hsla(43, 74%, 49%, 0.15);
+  top: 10%;
+  right: 10%;
+}
+
+.hero-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: hsla(43, 74%, 49%, 0.1);
+  bottom: 20%;
+  left: 10%;
+  animation-delay: -3s;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+  margin-top: 5rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hello-greeting {
+  color: var(--gold);
+}
+
+.hero-name {
+  font-size: 4.6rem;
+}
+
+.hero-text {
+  color: var(--muted-foreground);
+  font-size: 1.8rem;
+}
+
+.hero-bages {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  animation: fadeInUp 1s ease forwards;
+  background-color: var(--secondary);
+  padding: 0.375rem 1rem;
+  border-radius: 20px;
+}
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--gold);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+.content .hero-description {
+  margin-top: 1.5rem;
+  font-size: var(--fs-lg);
+  color: var(--muted-foreground);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+/* hero buttons section */
+.hero-buttons {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+.hero-buttons .btn {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.8rem;
+  font-weight: 500;
+  border-radius: 15px;
+  gap: 0.5rem;
+}
+.btn-primary {
+  background-color: var(--gold);
+  font-size: 1rem;
+  color: var(--background);
+  transition: all 0.5s ease;
+}
+.hero-buttons .btn-secondray {
+  color: var(--foreground);
+  background: transparent;
+  border: 1px solid var(--border);
+  transition: all 0.5s linear;
+}
+.btn-secondray:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: fadeInUp 1s ease forwards;
+}
+.hero-social a {
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--muted-foreground);
+  padding: 0.54rem 0.54rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-social a:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}

@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .navbar .container .nav-link {
+        display: none;
+    }
+    .navbar .menu-bar {
+        display: flex;
+    }
+    .content .hero-name {
+        font-size: 3.9rem;
+    }
+}
