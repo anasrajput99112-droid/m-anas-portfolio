@@ -117,9 +117,9 @@ body {
   bottom: -4px;
   left: 0;
   width: 0%;
-  height: 2px;
+  height: 1px;
   background-color: var(--gold);
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
   border-radius: 4px;
 }
 
@@ -317,12 +317,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.3rem;
   animation: fadeInUp 1s ease forwards;
+  margin-top: 0.1rem;
 }
 .hero-social a {
-  width: 44px;
-  height: 44px;
+  width: 39px;
+  height: 39px;
   background-color: transparent;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -331,13 +332,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s linear;
 }
 
 .hero-social a:hover {
   border-color: var(--gold);
   color: var(--gold);
   transform: translateY(-2px);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 80px;
+  color: var(--muted-foreground);
+  left: 50%;
+  display: flex;
+  align-items: center;
+  z-index: -99;
+  flex-direction: column;
+  font-size: 0.783rem;
+  animation: bounce 2s infinite;
+  /* border: 1px solid var(--gold); */
+}
+.scroll-indicator span {
+  border: 1px solid var(--gold);
+  padding: 0.2rem;
+  border-radius: 10px;
+}
+
+.scroll-line {
+  height: 40px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
 }
 
 /* Animations */
