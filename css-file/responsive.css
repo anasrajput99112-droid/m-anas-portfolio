@@ -24,7 +24,7 @@
     height: 35px;
   }
 
-  .hero-section {
-    height: 110vh;
+  .scroll-indicator {
+    bottom: 140px;
   }
 }
