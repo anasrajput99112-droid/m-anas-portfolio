@@ -1,0 +1,41 @@
+
+/*:root variable*/
+:root {
+  /* Premium Dark Theme */
+  --background: hsl(222, 47%, 6%);
+  --foreground: hsl(45, 30%, 96%);
+  --card: hsl(222, 47%, 9%);
+  --card-foreground: hsl(45, 30%, 96%);
+  --primary: hsl(43, 74%, 49%);
+  --primary-foreground: hsl(222, 47%, 6%);
+  --secondary: hsl(222, 30%, 15%);
+  --secondary-foreground: hsl(45, 30%, 96%);
+  --muted: hsl(222, 30%, 12%);
+  --muted-foreground: hsl(220, 15%, 55%);
+  --border: hsl(222, 30%, 18%);
+  --gold: hsl(43, 74%, 49%);
+  --gold-light: hsl(43, 74%, 65%);
+  --gold-dark: hsl(43, 74%, 35%);
+  --navy-dark: hsl(222, 47%, 6%);
+  --navy: hsl(222, 47%, 11%);
+  --navy-light: hsl(222, 30%, 18%);
+  --gradient-gold: linear-gradient(
+    135deg,
+    hsl(43, 74%, 49%),
+    hsl(35, 85%, 55%)
+  );
+  --shadow-gold: 0 4px 30px -5px hsla(43, 74%, 49%, 0.25);
+  --shadow-card: 0 10px 40px -10px hsla(222, 47%, 3%, 0.5);
+  --font-heading: "Space Grotesk";
+  --font-body: "Inter", sans-serif;
+  --radius: 0.75rem;
+
+  /* font-size */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+}
