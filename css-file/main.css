@@ -71,8 +71,6 @@ body {
   color: var(--gold);
 }
 
-
-
 .nav-link a {
   margin-left: 2rem;
   font-size: var(--fs-md);
@@ -131,13 +129,12 @@ body {
   /* backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); */
   background-color: var(--secondary);
-  top: 50px;
+  top: -10px;
   left: 0;
   text-align: center;
+  transition: all .5s;
   padding: 4rem;
 }
-
-
 
 /*mobile menu end*/
 
@@ -215,7 +212,6 @@ body {
 
 .hero-name {
   font-size: 4.6rem;
-  
 }
 
 .hero-text {

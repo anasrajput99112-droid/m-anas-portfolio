@@ -5,11 +5,11 @@
   .nav-link {
     display: none;
   }
-
-.nav-link-mobile.active {
+/* 
+  .nav-link-mobile.active {
     display: flex;
-}
-  /* Ensure mobile menu is visible when active */
+  }
+  Ensure mobile menu is visible when active */
 
   .content .hero-name {
     font-size: 2.5rem;
@@ -80,5 +80,9 @@
   .icon {
     width: 20px;
     height: 20px;
+  }
+
+  .footer-text {
+    text-align: center;
   }
 }
