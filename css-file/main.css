@@ -112,7 +112,7 @@ body {
 .menu-bar span {
   height: 3px;
   width: 25px;
-  background: var(--foreground);
+  background: var(--gold);
   border-radius: 2px;
   transition: all 0.3s ease;
   display: block;
@@ -134,6 +134,18 @@ body {
   text-align: center;
   transition: all .5s;
   padding: 4rem;
+}
+
+.nav-link-mobile .active {
+  color: var(--gold);
+}
+.nav-link-mobile a {
+  color: var(--muted-foreground);
+  transition: all .5s;
+}
+
+.nav-link-mobile a:hover {
+  color: var(--gold);
 }
 
 /*mobile menu end*/

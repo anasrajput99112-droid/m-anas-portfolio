@@ -11,6 +11,10 @@
   }
   Ensure mobile menu is visible when active */
 
+.content .hero-description  {
+  font-size: 1.1rem;
+}
+
   .content .hero-name {
     font-size: 2.5rem;
   }
