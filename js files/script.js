@@ -17,3 +17,9 @@ navlink.querySelectorAll("a").forEach((link) => {
     menubtn.classList.remove("active");
   });
 });
+
+// Initialize Lenis smooth scrolling
+const lenis = new Lenis({
+  autoRaf: true,
+  duration: 3.5,
+});
